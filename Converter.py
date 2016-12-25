@@ -81,18 +81,28 @@ if choice =='5':
 if choice =='6':
 	print("Your result is", divide(num1, .453), "Pounds")
 
-# the program begins the exit process
+# the program begins the exit or restart process
 
-choice = input("Would you like to make another calculation (Yes) (No):")
+choice = input("Would you like to make another calculation (Y)es (N)o:")
+# input which causes the program to restart
 if choice == 'Yes':
+  restart()
+if choice == 'Y':
+   restart()
+if choice == 'y':
   restart()
 if choice == 'yes':
   restart()
+# input which causes the program to exit
 if choice == 'no':
+  exec("raise SystemExit")
+if choice == 'N':
+  exec("raise SystemExit")
+if choice == 'n':
   exec("raise SystemExit")
 if choice == 'No':
   exec("raise SystemExit")
 else:
-  print("That is not a (Yes) or (No) answer, exiting program...")
+  print("That is not a (Y)es or (N)o answer, exiting program...")
   time.sleep(1)
   exec("raise SystemExit")
